@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brilliant Discoveries | Home</title>
+    <title> Mervis' Portfolio| Home</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -59,7 +59,7 @@
             align-items: center;
             opacity: 0;
             pointer-events: none;
-            transition: opacity 0.5s ease;
+            transition: opacity 0.2s ease;
         }
 
         .welcome-2026-overlay.active {
@@ -345,7 +345,7 @@
         /* Common Components */
         .section-title {
             font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
+            font-size: 2rem;
             margin-bottom: 50px;
             color: var(--prof-plum);
             position: relative;
@@ -531,14 +531,19 @@
             height: 350px;
             border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
             border: 3px solid var(--primary-purple);
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
         }
 
         .profile-image {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            filter: contrast(1.15) brightness(1.08) saturate(1.1);
+            image-rendering: crisp-edges;
         }
 
         .quick-intro {
@@ -589,10 +594,14 @@
         }
         
         .about-content-section {
-            background: var(--bg-white);
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
             border-radius: 30px;
             padding: 60px;
             margin: 40px 0;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
         }
         
         .about-content {
@@ -719,12 +728,14 @@
         }
         
         .project-card {
-            background: var(--bg-white);
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
             border-radius: 20px;
             padding: 30px;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
             transition: var(--transition-smooth);
-            border: 1px solid rgba(251, 207, 232, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.5);
             overflow: hidden;
             position: relative;
         }
@@ -741,7 +752,9 @@
         
         .project-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 25px 50px rgba(167, 139, 250, 0.1);
+            box-shadow: 0 15px 50px rgba(167, 139, 250, 0.2);
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(15px);
         }
         
         .project-icon {
@@ -758,7 +771,7 @@
         }
         
         .project-title {
-            font-size: 1.3rem;
+            font-size: 1.1rem;
             font-weight: 700;
             margin-bottom: 15px;
             color: var(--prof-plum);
@@ -786,16 +799,243 @@
         }
         
         .project-link {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 120px;
+            height: 50px;
+            padding: 10px 15px;
             margin-top: 15px;
-            color: var(--primary-purple);
+            background: var(--primary-purple);
+            color: white;
             text-decoration: none;
             font-weight: 600;
+            border-radius: 30px;
             transition: var(--transition-smooth);
+            font-size: 0.8rem;
+            white-space: nowrap;
         }
         
         .project-link:hover {
+            background: var(--prof-plum);
+            color: white;
+            transform: scale(1.1);
+        }
+
+        /* ====== CERTIFICATES PAGE SPECIFIC STYLES ====== */
+        .certificates-hero {
+            text-align: center;
+            padding: 60px 0;
+        }
+        
+        .certificates-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .certificates-hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+        
+        .certificates-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .certificate-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            transition: var(--transition-smooth);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+        
+        .certificate-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 50px rgba(167, 139, 250, 0.2);
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(15px);
+        }
+        
+        .certificate-image {
+            width: 100%;
+            height: 280px;
+            object-fit: contain;
+            object-position: center;
+            border-bottom: 3px solid var(--primary-purple);
+            background-color: #ffffff;
+            image-rendering: crisp-edges;
+            -webkit-font-smoothing: antialiased;
+            filter: contrast(1.45) brightness(1.15) saturate(1.25) sharpness(1.3);
+        }
+        
+        
+        .certificate-content {
+            padding: 25px;
+        }
+        
+        .certificate-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 10px;
             color: var(--prof-plum);
+        }
+        
+        .certificate-issuer {
+            color: var(--primary-purple);
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+        
+        .certificate-date {
+            color: var(--slate-dark);
+            font-size: 0.85rem;
+            opacity: 0.7;
+            margin-bottom: 15px;
+        }
+        
+        .certificate-desc {
+            color: var(--slate-dark);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            opacity: 0.8;
+        }
+        
+        .certificate-actions {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .certificate-btn {
+            padding: 10px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: var(--transition-smooth);
+            flex: 1;
+            text-align: center;
+        }
+        
+        .view-btn {
+            background: var(--primary-purple);
+            color: white;
+        }
+        
+        .view-btn:hover {
+            background: var(--prof-plum);
+            color: white;
+        }
+        
+        .download-btn {
+            background: transparent;
+            color: var(--primary-purple);
+            border: 2px solid var(--primary-purple);
+        }
+        
+        .download-btn:hover {
+            background: rgba(167, 139, 250, 0.1);
+        }
+        
+        /* Certificate Modal */
+        .certificate-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .certificate-modal.active {
+            display: flex;
+        }
+        
+        .modal-content {
+            background: white;
+            border-radius: 20px;
+            max-width: 900px;
+            max-height: 90vh;
+            overflow: auto;
+            position: relative;
+            animation: modalSlideIn 0.3s ease;
+        }
+        
+        @keyframes modalSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 30px;
+            border-bottom: 1px solid rgba(167, 139, 250, 0.2);
+        }
+        
+        .modal-header h3 {
+            color: var(--prof-plum);
+            font-size: 1.5rem;
+        }
+        
+        .close-modal {
+            background: transparent;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--slate-dark);
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition-smooth);
+        }
+        
+        .close-modal:hover {
+            background: rgba(167, 139, 250, 0.1);
+            color: var(--primary-purple);
+        }
+        
+        .modal-body {
+            padding: 30px;
+        }
+        
+        .modal-image {
+            width: 100%;
+            max-height: 60vh;
+            object-fit: contain;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .modal-details {
+            margin-top: 25px;
+        }
+        
+        .modal-details p {
+            margin-bottom: 10px;
+            color: var(--slate-dark);
         }
 
         /* ====== RESUME PAGE SPECIFIC STYLES ====== */
@@ -817,17 +1057,25 @@
         }
         
         .resume-section {
-            background: var(--bg-white);
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
             border-radius: 20px;
             padding: 30px;
             margin-bottom: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
         }
         
         .resume-sidebar {
-            background: var(--bg-white);
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
             border-radius: 20px;
             padding: 30px;
             height: fit-content;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
         }
         
         .skill-bar {
@@ -962,6 +1210,7 @@
             border: 1px solid rgba(167, 139, 250, 0.3);
         }
         
+        /* Social links removed from contact page but kept in footer */
         .social-links {
             display: flex;
             gap: 15px;
@@ -1030,7 +1279,8 @@
         @media (max-width: 992px) {
             .contact-grid,
             .resume-content,
-            .about-content {
+            .about-content,
+            .certificates-grid {
                 grid-template-columns: 1fr;
             }
             
@@ -1043,14 +1293,16 @@
             .about-content-section,
             .contact-info-card,
             .contact-form-card,
-            .resume-section {
+            .resume-section,
+            .certificate-content {
                 padding: 30px;
             }
             
             .about-hero h1,
             .projects-hero h1,
             .resume-hero h1,
-            .contact-hero h1 {
+            .contact-hero h1,
+            .certificates-hero h1 {
                 font-size: 2.5rem;
             }
             
@@ -1069,14 +1321,20 @@
             .contact-item {
                 padding: 12px;
             }
+            
+            .certificates-grid {
+                grid-template-columns: 1fr;
+            }
         }
         
         @media (max-width: 480px) {
-            .projects-grid {
+            .projects-grid,
+            .certificates-grid {
                 grid-template-columns: 1fr;
             }
             
-            .filter-buttons {
+            .filter-buttons,
+            .certificate-actions {
                 gap: 10px;
             }
             
@@ -1089,6 +1347,11 @@
                 width: 280px;
                 height: 280px;
             }
+            
+            .certificate-btn {
+                padding: 8px 15px;
+                font-size: 0.85rem;
+            }
         }
     </style>
 </head>
@@ -1098,6 +1361,26 @@
         <div class="welcome-2026-container">
             <h1 class="welcome-2026-title">WELCOME TO 2026!</h1>
             <p class="welcome-2026-subtitle">New Year, New Possibilities!And Yes You Made It!!!!!  </p>
+        </div>
+    </div>
+
+    <!-- Certificate Modal -->
+    <div class="certificate-modal" id="certificateModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Certificate Title</h3>
+                <button class="close-modal" id="closeModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img id="modalImage" src="" alt="Certificate Preview" class="modal-image">
+                <div class="modal-details">
+                    <p><strong>Issued by:</strong> <span id="modalIssuer"></span></p>
+                    <p><strong>Date:</strong> <span id="modalDate"></span></p>
+                    <p><strong>Description:</strong> <span id="modalDesc"></span></p>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -1126,6 +1409,7 @@
             <li><a href="#home" class="active">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
+            <li><a href="#certificates">Certificates</a></li>
             <li><a href="#resume">Resume</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -1185,11 +1469,15 @@
                                 <h3>Build</h3>
                                 <p>Entrepreneurship</p>
                             </div>
+                            <div class="stat-item">
+                                <h3>Certified</h3>
+                                <p>Professional Credentials</p>
+                            </div>
                         </div>
                         
-                        <a href="#about" class="cta-button" onclick="loadPage('about')">
-                            <i class="fas fa-user"></i>
-                            Learn More About Me
+                        <a href="#certificates" class="cta-button" onclick="loadPage('certificates')">
+                            <i class="fas fa-award"></i>
+                            View My Certifications
                         </a>
                     </div>
                 </section>
@@ -1280,12 +1568,16 @@
                             <h3 class="project-title">Cavendish Management System</h3>
                             <p class="project-desc">A comprehensive university management system for Cavendish University, handling student records, course management, grades, and administrative operations with an intuitive interface.</p>
                             <div class="project-tags">
-                                <span class="tag">React</span>
-                                <span class="tag">Node.js</span>
-                                <span class="tag">MongoDB</span>
-                                <span class="tag">Full-Stack</span>
+                                <span class="tag">Flask</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">Sqlite</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">HTML</span>
+                                <span class="tag">Javascript</span>
                             </div>
-                            <a href="https://cavendishmanagementportal.onrender.com/" target="_blank" class="project-link">View Layout →</a>
+                            <a href="https://cavendishmanagementportal.onrender.com/" target="_blank" class="project-link">
+                                View Project
+                            </a>
                         </div>
                         
                         <div class="project-card fade-in" data-category="design">
@@ -1295,12 +1587,14 @@
                             <h3 class="project-title">MaeUX</h3>
                             <p class="project-desc">A modern UI/UX design system and component library showcasing creative design patterns, interactive elements, and best practices for building beautiful user interfaces.</p>
                             <div class="project-tags">
-                                <span class="tag">Figma</span>
-                                <span class="tag">UI/UX</span>
-                                <span class="tag">Design System</span>
+                                <span class="tag">Javascript</span>
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
                                 <span class="tag">Interactive</span>
                             </div>
-                            <a href="#" class="project-link">View Layout →</a>
+                            <a href="https://littlecodermae.github.io/Maexus-Project/" class="project-link">
+                                View Project
+                            </a>
                         </div>
                         
                         <div class="project-card fade-in" data-category="web">
@@ -1315,7 +1609,9 @@
                                 <span class="tag">Responsive</span>
                                 <span class="tag">E-commerce</span>
                             </div>
-                            <a href="#" class="project-link">View Layout →</a>
+                            <a href="https://littlecodermae.github.io/Coffee-Project/" class="project-link">
+                                View Project
+                            </a>
                         </div>
                         
                         <div class="project-card fade-in" data-category="web">
@@ -1328,9 +1624,207 @@
                                 <span class="tag">Python</span>
                                 <span class="tag">MySQL</span>
                                 <span class="tag">Flask</span>
-                                <span class="tag">Database</span>
+                                <span class="tag">Javascript</span>
+                                <span class="tag">HTML/CSS</span>
                             </div>
-                            <a href="https://cuzlibrary.onrender.com" target="_blank" class="project-link">View Layout →</a>
+                            <a href="https://cuzlibrary.onrender.com" target="_blank" class="project-link">
+                                View Project
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- CERTIFICATES PAGE CONTENT -->
+        <div id="certificates-page" class="page-content" style="display: none;">
+            <div class="container">
+                <section class="certificates-hero fade-in">
+                    <h1>My Certifications</h1>
+                    <p>Professional certifications and credentials that validate my skills and expertise.</p>
+                </section>
+
+                <section id="certificates">
+                    <h2 class="section-title">Professional Certifications</h2>
+                    <div class="certificates-grid">
+                        <div class="certificate-card fade-in">
+                            <img src="Certificates/ai agents certificate.png" alt="AI Agents Certificate" class="certificate-image">
+                            <div class="certificate-content">
+                                <h3 class="certificate-title">AI Agents</h3>
+                                <p class="certificate-issuer">Professional Certification</p>
+                                <p class="certificate-date">Completed</p>
+                                <p class="certificate-desc">Advanced training in AI agent development, autonomous systems, and intelligent automation technologies.</p>
+                                <div class="certificate-actions">
+                                    <a href="Certificates/ai agents certificate.pdf" class="certificate-btn view-btn">
+                                        <i class="fas fa-eye"></i> View
+                                    </a>
+                                    <a href="Certificates/ai agents certificate.pdf" class="certificate-btn download-btn" download>
+                                        <i class="fas fa-download"></i> Download
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="certificate-card fade-in">
+                            <img src="Certificates/cisco certificate.png" alt="Cisco Certificate" class="certificate-image">
+                            <div class="certificate-content">
+                                <h3 class="certificate-title">Cisco Certification</h3>
+                                <p class="certificate-issuer">Cisco Systems</p>
+                                <p class="certificate-date">Completed</p>
+                                <p class="certificate-desc">Professional networking certification covering routing, switching, and network infrastructure management.</p>
+                                <div class="certificate-actions">
+                                    <a href="Certificates/cisco certificate.pdf" class="certificate-btn view-btn">
+                                        <i class="fas fa-eye"></i> View
+                                    </a>
+                                    <a href="Certificates/cisco certificate.pdf" class="certificate-btn download-btn" download>
+                                        <i class="fas fa-download"></i> Download
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="certificate-card fade-in">
+                            <img src="Certificates/Database Certificate.png" alt="Database Certificate" class="certificate-image">
+                            <div class="certificate-content">
+                                <h3 class="certificate-title">Database Management</h3>
+                                <p class="certificate-issuer">Professional Certification</p>
+                                <p class="certificate-date">Completed</p>
+                                <p class="certificate-desc">Comprehensive database design, implementation, and management across relational and non-relational systems.</p>
+                                <div class="certificate-actions">
+                                    <a href="Certificates/Database Certificate.pdf" class="certificate-btn view-btn">
+                                        <i class="fas fa-eye"></i> View
+                                    </a>
+                                    <a href="Certificates/Database Certificate.pdf" class="certificate-btn download-btn" download>
+                                        <i class="fas fa-download"></i> Download
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="certificate-card fade-in">
+                            <img src="Certificates/Deeplearning AI Certificate.png" alt="Deep Learning Certificate" class="certificate-image">
+                            <div class="certificate-content">
+                                <h3 class="certificate-title">Deep Learning AI</h3>
+                                <p class="certificate-issuer">DeepLearning.AI</p>
+                                <p class="certificate-date">Completed</p>
+                                <p class="certificate-desc">Advanced deep learning techniques, neural networks, and artificial intelligence applications in real-world scenarios.</p>
+                                <div class="certificate-actions">
+                                    <a href="Certificates/Deeplearning AI Certificate.pdf" class="certificate-btn view-btn">
+                                        <i class="fas fa-eye"></i> View
+                                    </a>
+                                    <a href="Certificates/Deeplearning AI Certificate.pdf" class="certificate-btn download-btn" download>
+                                        <i class="fas fa-download"></i> Download
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="certificate-card fade-in">
+                            <img src="Certificates/frontend dev.png" alt="Frontend Development Certificate" class="certificate-image">
+                            <div class="certificate-content">
+                                <h3 class="certificate-title">Frontend Development</h3>
+                                <p class="certificate-issuer">Professional Certification</p>
+                                <p class="certificate-date">Completed</p>
+                                <p class="certificate-desc">Comprehensive frontend development with HTML5, CSS3, JavaScript, React, and modern web technologies.</p>
+                                <div class="certificate-actions">
+                                    <a href="Certificates/frontend dev.pdf" class="certificate-btn view-btn">
+                                        <i class="fas fa-eye"></i> View
+                                    </a>
+                                    <a href="Certificates/frontend dev.pdf" class="certificate-btn download-btn" download>
+                                        <i class="fas fa-download"></i> Download
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="certificate-card fade-in">
+                            <img src="Certificates/Gen AI Certificate.png" alt="Gen AI Certificate" class="certificate-image">
+                            <div class="certificate-content">
+                                <h3 class="certificate-title">Generative AI</h3>
+                                <p class="certificate-issuer">Professional Certification</p>
+                                <p class="certificate-date">Completed</p>
+                                <p class="certificate-desc">Generative AI technologies, large language models, prompt engineering, and AI application development.</p>
+                                <div class="certificate-actions">
+                                    <a href="Certificates/Gen AI Certificate.pdf" class="certificate-btn view-btn">
+                                        <i class="fas fa-eye"></i> View
+                                    </a>
+                                    <a href="Certificates/Gen AI Certificate.pdf" class="certificate-btn download-btn" download>
+                                        <i class="fas fa-download"></i> Download
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="certificate-card fade-in">
+                            <img src="Certificates/Machine Learning for all.png" alt="Machine Learning Certificate" class="certificate-image">
+                            <div class="certificate-content">
+                                <h3 class="certificate-title">Machine Learning for All</h3>
+                                <p class="certificate-issuer">Professional Certification</p>
+                                <p class="certificate-date">Completed</p>
+                                <p class="certificate-desc">Comprehensive machine learning fundamentals, algorithms, model training, and practical applications.</p>
+                                <div class="certificate-actions">
+                                    <a href="Certificates/Machine Learning for all.pdf" class="certificate-btn view-btn">
+                                        <i class="fas fa-eye"></i> View
+                                    </a>
+                                    <a href="Certificates/Machine Learning for all.pdf" class="certificate-btn download-btn" download>
+                                        <i class="fas fa-download"></i> Download
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="certificate-card fade-in">
+                            <img src="Certificates/networking certificate.png" alt="Networking Certificate" class="certificate-image">
+                            <div class="certificate-content">
+                                <h3 class="certificate-title">Networking</h3>
+                                <p class="certificate-issuer">Professional Certification</p>
+                                <p class="certificate-date">Completed</p>
+                                <p class="certificate-desc">Computer networking fundamentals, protocols, security, and infrastructure management.</p>
+                                <div class="certificate-actions">
+                                    <a href="Certificates/networking certificate.pdf" class="certificate-btn view-btn">
+                                        <i class="fas fa-eye"></i> View
+                                    </a>
+                                    <a href="Certificates/networking certificate.pdf" class="certificate-btn download-btn" download>
+                                        <i class="fas fa-download"></i> Download
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="certificate-card fade-in">
+                            <img src="Certificates/OOP Certificate.png" alt="Object-Oriented Programming Certificate" class="certificate-image">
+                            <div class="certificate-content">
+                                <h3 class="certificate-title">Object-Oriented Programming</h3>
+                                <p class="certificate-issuer">Professional Certification</p>
+                                <p class="certificate-date">Completed</p>
+                                <p class="certificate-desc">OOP principles, design patterns, and best practices for building scalable and maintainable software.</p>
+                                <div class="certificate-actions">
+                                    <a href="Certificates/OOP Certificate.pdf" class="certificate-btn view-btn">
+                                        <i class="fas fa-eye"></i> View
+                                    </a>
+                                    <a href="Certificates/OOP Certificate.pdf" class="certificate-btn download-btn" download>
+                                        <i class="fas fa-download"></i> Download
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="certificate-card fade-in">
+                            <img src="Certificates/os certificate.png" alt="Operating Systems Certificate" class="certificate-image">
+                            <div class="certificate-content">
+                                <h3 class="certificate-title">Operating Systems</h3>
+                                <p class="certificate-issuer">Professional Certification</p>
+                                <p class="certificate-date">Completed</p>
+                                <p class="certificate-desc">Operating system concepts, process management, memory management, and system architecture.</p>
+                                <div class="certificate-actions">
+                                    <a href="Certificates/os certificate.pdf" class="certificate-btn view-btn">
+                                        <i class="fas fa-eye"></i> View
+                                    </a>
+                                    <a href="Certificates/os certificate.pdf" class="certificate-btn download-btn" download>
+                                        <i class="fas fa-download"></i> Download
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -1375,11 +1869,6 @@
                                 <p>Founded and led a microfinance company providing accessible loans to small businesses and individuals. Developed business strategy, operational policies, and financial management systems. Managed a team of 5 employees and oversaw customer acquisition, loan processing, and repayment tracking. Implemented digital solutions to streamline operations and improve customer experience.</p>
                             </div>
                             
-                            <div class="resume-item">
-                                <h3>Computer Lab Assistant</h3>
-                                <p class="date">Cavendish University Zambia | September 2022 - May 2023</p>
-                                <p>Assisted students with programming concepts and software tools. Maintained lab equipment and software installations. Conducted workshops on web development basics.</p>
-                            </div>
                         </section>
                         
                         <section class="resume-section">
@@ -1387,15 +1876,9 @@
                             
                             <div class="resume-item">
                                 <h3>Bachelor of Science in Computer Science</h3>
-                                <p class="date">Cavendish University Zambia | 2022 - Present</p>
-                                <p>Expected Graduation: 2025</p>
+                                <p class="date">Cavendish University Zambia | 2023 - Present</p>
+                                <p>Expected Graduation: 2027</p>
                                 <p><strong>Relevant Coursework:</strong> Data Structures & Algorithms, Database Systems, Web Development, Software Engineering, Artificial Intelligence, Computer Networks</p>
-                            </div>
-                            
-                            <div class="resume-item">
-                                <h3>Graphic Design Certification</h3>
-                                <p class="date">Online Certification | 2021</p>
-                                <p>Completed comprehensive training in UI/UX design principles, Adobe Creative Suite, and design thinking methodologies.</p>
                             </div>
                         </section>
                     </div>
@@ -1525,20 +2008,8 @@
                             </div>
                         </div>
                         
-                        <div style="margin-top: 30px;">
-                            <h3 style="margin-bottom: 15px; color: var(--prof-plum);">Connect with me</h3>
-                            <div class="social-links">
-                                <a href="https://github.com/LittleCoderMae" class="social-link">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                                <a href="https://www.linkedin.com/in/mervis-mae-nkubo-60b217264?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" class="social-link">
-                                    <i class="fab fa-linkedin-in"></i>
-                                </a>
-                                <a href="https://x.com/maemervisnkubo?s=21" class="social-link">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                            </div>
-                        </div>
+                        <!-- Social links REMOVED from contact page -->
+                        <!-- They are now only in the footer -->
                     </div>
                     
                     <div class="contact-form-card fade-in">
@@ -1595,6 +2066,41 @@
     </footer>
 
     <script>
+        // Certificate Modal Functionality
+        function viewCertificate(title, issuer, date, description, imageUrl) {
+            document.getElementById('modalTitle').textContent = title;
+            document.getElementById('modalIssuer').textContent = issuer;
+            document.getElementById('modalDate').textContent = date;
+            document.getElementById('modalDesc').textContent = description;
+            document.getElementById('modalImage').src = imageUrl;
+            
+            const modal = document.getElementById('certificateModal');
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            
+            return false;
+        }
+
+        function closeCertificateModal() {
+            const modal = document.getElementById('certificateModal');
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('certificateModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeCertificateModal();
+            }
+        });
+
+        // Close modal with escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeCertificateModal();
+            }
+        });
+
         // Welcome to 2026 Animation
         function triggerWelcomeAnimation() {
             const overlay = document.getElementById('welcomeOverlay');
@@ -1937,6 +2443,9 @@
                 loadPage(page);
             });
         });
+
+        // Close modal button
+        document.getElementById('closeModal').addEventListener('click', closeCertificateModal);
 
         // Initialize
         document.addEventListener('DOMContentLoaded', function() {
